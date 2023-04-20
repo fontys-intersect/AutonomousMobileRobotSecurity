@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scan Radio Frequencies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Tactic: Intel Gathering</h1>
+
+        <h2>Technique: Scan Radio Frequencies</h2>
+
+        It's possible to scan for the radio frequencies that are being emitted from robot's. These Radio Frequencies can
+        be analyzed and the results of these analyses can be used for jamming, or controlling the robot.
+
+        <h2>Technique in practice</h2>
+        <a href="https://www.youtube.com/shorts/49J_36MoENs">Video: Demo of radio frequency scanning with a Hackrf
+            One</a>
+        <a href="https://www.youtube.com/watch?v=aSL3Xy_OGP8">Video: Demo of radio frequency scanning and capturing with
+            a FlipperZero</a>
+
+        <h2>Mitigations</h2>
+        Radio frequency scanning itself cannot be mitigated. What can be mitigated, however, is the risk of sensitive information leaking through this technique by limiting and securing the critical data sent over radio signals. Developers of the robots should make careful considerations concerning the volume and type of information that is being broadcasted, as wel as applying proper encryption techniques on the data itself.
+
+        <h2>Detections</h2>
+        Detecting the scanning of radio frequencies is nigh impossible. If the proper mitigations are applied, however, detecting radio frequency scanning is not productive or useful to a blue teamer.
+
+        <h2>Documented incidents</h2>
+
+        Radio frequency scanning is applied on the Clearpath Jackal robot during a pentest. As can be seen in the image below, the radio communication between the robot and the controller were intercepted, and can be analyzed.
+
+        <br>
+        <img src="images/hackrf_radio_frequency.png" width="500">
+
+</body>
+
+</html>

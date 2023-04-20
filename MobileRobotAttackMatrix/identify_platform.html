@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Identify Platform</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Intel Gathering</h1>
+
+    <h2>Technique: Identify Platform</h2>
+    Identifying the platform running on the robot is an essential first step towards employing many other techniques. Knowing the platform (and its version) allows the attacker to zero in on OS specific exploitation techniques that are more effective than general techniques found in, say, software running as a service. Knowing the version of the platform allows the attacker to look for known vulnerabilities related to that specific version.
+
+    <h2>Technique in practice</h2>
+    <a href="https://www.youtube.com/watch?v=AKWUllE9MOg">Video: Nmap OS scan</a>
+
+    <h2>Mitigations</h2>
+    Attempting to block service scanners like Nmap would lessen the chance of revealing the OS to the attacker. The version signature can be kept vague too, so that the attacker cannot look for known version-bound vulnerabilities.
+
+    <h2>Detections</h2>
+    General version scanning detection systems like an IDS can be used to detect attempts at identifying the platform.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    During a pentest performed on a Jackal robot from Clear Path Robotics, the services that ran on it and were mapped to network ports were scanned with Nmap. The OS was also revealed.
+
+    <br>
+    <br>
+    <img src="images/jackal_ports.png">
+
+</body>
+
+</html>

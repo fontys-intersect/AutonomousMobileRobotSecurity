@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Supply Chain Compromise</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Initial Access</h1>
+
+    <h2>Technique: Supply Chain Compromise</h2>
+    Robots, like other machines with software, make excessive use of dependencies for its functionality. These
+    dependencies can contain vulnerabilities. An attacker can focus its efforts on exploiting the vulnerable
+    dependencies. An autonomous robot is not unique in this regard.
+
+    <h2>Technique in practice</h2>
+    <a href="https://www.youtube.com/watch?v=ljT4AcCza9Q">Video: what is a supply chain attack?</a>
+    <a href="https://www.keepersecurity.com/threats/supply-chain-attack.html">Article: what is a supply chain
+      attack?</a>
+
+    <h2>Mitigations</h2>
+    The developers of the autonomous robot should keep the used dependencies up-to-date, especially on security-critical
+    updates. The user of the robot should regularly check for updates from the robot's manufacturer.
+
+    <h2>Detections</h2>
+    The toolchain used in development should do periodic scanning of its dependencies, and cross-reference these results
+    with popular security databases. This automated process would notify the developers of vulnerabilities, and what
+    version to update it to.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    No incidents known at the time of writing.
+
+    <h2>Documented incidents in other domains</h2>
+    <ol>
+      <il><a href="https://www.trellix.com/en-us/security-awareness/ransomware/what-is-stuxnet.html">[2018] Stuxnet
+          malware (uses a supply chain compromise vulnerability)</a></il>
+    </ol>
+
+</body>
+
+</html>

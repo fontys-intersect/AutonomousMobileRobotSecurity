@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Compromise Controller</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Tactic: Initial Access</h1>
+
+        <h2>Technique: Compromise Controller</h2>
+
+        Compromising the robots controller is a effective way of gaining control over the robot. This can be done in a few ways: <br>
+		- Recording and replaying the commands that the controller sends to the robot. <br>
+		- Hacking the controller itself by overwriting certain parts of the code used in the controller. <br>
+		- DOS'ing the controller communication to the robot. This will cause the robot to not respond to the operator. <br>
+		- Having the same controller sending commands at the same time blocking or even breaking the robots communication.
+		
+
+        <h2>Technique in practice</h2>
+
+        <h2>Mitigations</h2>
+        As for mitifations a few additions in the robots security can fix these issues: <br>
+		- Sending ID's or keys with each command send so the robot can verify and check if the command is a new one and authorized to send this command. <br>
+		- Keeping the controller in a safe location. <br>
+		- Make it possible to interact with the robot in multiple ways to minimize the DOS attack risk and making it return upon encountering loss of communication. <br>
+		- Pair a controller to the robot is a safe way to make sure the same type of controller cant control the robot you are using.
+
+        <h2>Detections</h2>
+        Detecting the multiple ways a controller can be compromised depends on the attack: <br>
+		- With the ID system in place for messaging between the controller and robot, it is easy to detect fake or forged commands. <br>
+		- Loss of communication is a sure tell way of detecting a DOS attack. <br>
+		- Having the controller be paired to the robot makes detecting a roque controller easier as it does not have authorized permission to command the robot.
+
+        <h2>Documented incidents with autonomous robots</h2>
+        No incidents known at the time of writing.
+
+        <h2>Documented incidents in other domains</h2>
+        <ol>
+        </ol>
+
+</body>
+
+</html>
