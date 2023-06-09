@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Eavesdrop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Impact</h1>
+
+    <h2>Technique: Eavesdrop</h2>
+
+    Compromised robots can be used for eavesdropping. When present on a robot, camera or microphone feeds can be seen by unauthorized users.
+
+    <h2>Technique in practice</h2>
+
+    <h2>Mitigations</h2>
+    Video and audio streams should be encrypted so they cannot be extracted from network traffic.
+
+    <h2>Detections</h2>
+    A possibility to detect if a robot is used for eavesdropping by an unauthorized user, is by looking for unexpected or suspicious amounts of network traffic.
+    Video streaming can generate large amounts of UDP traffic. When this traffic is detected and originating from a robot, one should check what the destination of the traffic is.
+
+    <h2>Ethical Considerations</h2>
+    When using this tactic, one must take into consideration that it might be an invasion of someones privacy.
+    Depending on the country in which the tactic is used, one should also be aware of laws and regulations regarding making video and audio recordings of other people and that the footage is stored securely.
+    When eavesdropping is used by an organization like police, they should check if a warrant is necessary.
+    When recordings are made during eavesdropping, one should be aware of laws like the GDPR when storing these recordings.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    The Unitree robot has a dashboard where one can see the feed from the robot's camera's. When one has access to the robot, these camera's could be used for espionage.
+
+    <br>
+    <br>
+    <img src="images/unitree-dashboard.png" width="600">
+
+    <h2>Documented incidents in other domains</h2>
+    <ol>
+      <il><a href="https://www.cvedetails.com/cve/CVE-2022-34819/">[2022] SIMATIC heap-based buffer overflow</a></il>
+
+    </ol>
+
+</body>
+
+</html>

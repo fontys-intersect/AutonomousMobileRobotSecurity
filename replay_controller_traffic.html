@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Replay Controller Traffic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Disturbance</h1>
+
+    <h2>Technique: Replay Controller Traffic</h2>
+
+    A replay attack occurs when a cyber criminal eavesdrops on a secure network communication, intercepts it, and then
+    fraudulently delays or resend it to misdirect the receiver into doing what the hacker wants.
+    The added danger of replay attacks is that a hacker doesn't even need advanced skills to decrypt a message after
+    capturing it from the network. The attack could be successful simply by resending the whole thing.
+
+
+
+    <h2>Technique in practice</h2>
+    <a href="https://www.youtube.com/watch?v=fEbdlFB9YSc">Video: Demo of a Replay attack</a>
+    </br>
+    <a href="https://www.youtube.com/watch?v=EC8ArgzwwAM">Video: Replay attack on a car</a>
+
+    <h2>Mitigations</h2>
+    Mitigating such an attack can be done by using "keys" in each message. This key should only be valid for one
+    message.
+    With these keys, replaying an attack would cause the key to be incorrect the second time the message is send.
+    </br>
+    </br>
+    Another preventive technique is using timestamps on messages. This can limit the time the attacker has to eavesdrop,
+    change the message and send it.
+
+    <h2>Detections</h2>
+    Detection can be done by constantly scanning for messages that are the exactly the same.
+    </br> The best way however is using one of the mitigations above, timestamps are the easiest as you can clearly see
+    the stamps with the same or maybe even a way later time.
+    <h2>Documented incidents with autonomous robots</h2>
+    No incidents known at the time of writing.
+
+    <h2>Documented incidents in other domains</h2>
+    <ol>
+      <il><a
+          href="https://www.cvedetails.com/vulnerability-list.php?vendor_id=0&product_id=0&version_id=0&page=1&hasexp=0&opdos=0&opec=0&opov=0&opcsrf=0&opgpriv=0&opsqli=0&opxss=0&opdirt=0&opmemc=0&ophttprs=0&opbyp=0&opfileinc=0&opginf=0&cvssscoremin=0&cvssscoremax=0&year=0&month=0&cweid=294&order=3&trc=87&sha=856a84789a0367aad11efa51c0839df2ebaf534c">List
+          to all Replay attacks in CVE database</a></il>
+      - This ranges from industrial control solutions to cars
+
+    </ol>
+
+</body>
+
+</html>

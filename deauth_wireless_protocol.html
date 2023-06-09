@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Deauth Wireless Protocol</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Initial Access</h1>
+
+    <h2>Technique: Deauth Wireless Protocol</h2>
+    A deauthentication attack can be performed on a Wi-Fi network. This will disconnect a machine from the network.
+
+    In the context of robotics, a successful deauthentication attack on a controller would make it so that the rightful owner of the robot
+    cannot control it anymore via WiFi. A more advanced actor could set up an evil twin access point. The
+    robot will reconnect to a similar network, only this network is controlled by the attacker. This would give the
+    attacker an initial point of contact, upon which they can escalate control by approaching the robot within the
+    malicious twin network.
+
+    <h2>Technique in practice</h2>
+    During a pentest of the Unitree GO1 a deauthentication atttack was attempted targeting another device on the network. The target device did not suffer from any major disruptions.
+    <img src="images/deauth.png">
+<!--    <a href="https://www.youtube.com/watch?v=O1TpBjoiLe4">Video: WiFi wireless security - deauthentication</a>-->
+
+    <h2>Mitigations</h2>
+    There is not much you can do to prevent deauthentication attacks. An attacker only needs to be within range of the WiFi network but does not have to be connected. Also it uses an integral feature of the WiFi specification.
+    There are however new specifications which mitigate this issue, namely 802.11w/WPA3, however you can only hope that both devices communicating with eachother support these standards.
+<!--    The Wi-Fi network should be strongly encrypted with a solid password. This makes it hard to perform any malicious
+    attacks as the result of a deauthentication, like a twin attack. WPA2 should be used.-->
+
+    <h2>Detections</h2>
+    The robot can include sniffers that listen for authentication and deauthentication packets send to it. Based on
+    heuristics like the frequency of such packets and the source of them, the sniffer could determine whether it is a
+    deauthentication attack or not.
+
+    <h2>Ethical Considerations</h2>
+    Using this tactic might disturb the target network and one must take into consideration that the tactic can create
+    dangerous situations.
+    When a robot is disconnected, it is possible that it's behavior might become unpredictable or uncontrollable.
+    Trying to attack a Wi-Fi network might also disturb other connected devices, which also could put people in danger
+    or have other unwanted consequences.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    No incidents known at the time of writing.
+
+    <h2>Documented incidents in other domains</h2>
+    <ol>
+      <il><a href="https://transition.fcc.gov/Daily_Releases/Daily_Business/2015/db0818/DA-15-917A1.pdf">[2015] Order and consent decree — In the Matter of SMART CITY HOLDINGS, LLC</a></il>
+    </ol>
+
+</body>
+
+</html>

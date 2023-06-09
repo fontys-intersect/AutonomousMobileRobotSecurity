@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hardware Factory Reset</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Disturbance</h1>
+
+    <h2>Technique: Hardware Factory Reset</h2>
+    Robots often have an interface for a hardware factory reset. It is possible for the software to become corrupt and therefore inaccessible. The hardware factory reset gives the owner of the device a possibility to start over.
+
+    An attacker can use such a hardware factory reset interface as well. If the robot defaults to standard credentials, then the attacker could use that to gain complete control.
+
+    <h2>Technique in practice</h2>
+    <a href="https://www.mybotshop.de/Datasheet/Unitree_A1_User_Manual_v1.0.pdf">Manual: Unitree user manual (includes factory reset instructions)</a>
+
+    <h2>Mitigations</h2>
+    The hardware factory reset should only be accessible through some sort of physical key. Furthermore, the default credentials should be unique to each copy of the product.
+
+    <h2>Detections</h2>
+    A simple health check service could detect whether the robot is still accessible.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    No incidents known at the time of writing.
+
+</body>
+
+</html>

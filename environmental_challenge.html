@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Environmental Challenge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Disturbance</h1>
+
+    <h2>Technique: Environmental Challenge</h2>
+    The autonomous robot's AI relies on its sensors to relay the environment around it. The AI will act accordingly to the output of those sensors. An attacker can attempt to confuse the AI by giving the sensors confusing or malicious input.
+
+    <h2>Technique in practice</h2>
+    <a href="https://www.youtube.com/watch?v=fabU27GGVY0">Video: autonomous delivery robot gets confused when the sidewalk ends</a>
+
+    <h2>Mitigations</h2>
+    The robot itself should have heuristics for detecting when it gets stuck, and perform default operations like backing up or, in security-critical environments, shut itself down.
+
+    <h2>Detections</h2>
+    The sensors and internal AI logic should have heuristics for detecting when it gets stuck or when the environment is unfamiliar.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    <a href="https://www.youtube.com/watch?v=fabU27GGVY0">Video: autonomous delivery robot gets confused when the sidewalk ends</a>
+
+</body>
+
+</html>

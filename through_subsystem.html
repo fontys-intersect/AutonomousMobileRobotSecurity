@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Through Subsystem</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tactic: Lateral Movement </h1>
+
+    <h2>Technique: Through Subsystem </h2>
+    Autonomous robots often have many different components with different layers of software running on it. It is possible that an attacker gets access to one of those components, but ultimately wants to access another component instead. The attacker can attempt this by applying lateral movement through these components, aka "subsystems".
+
+    <h2>Technique in practice</h2>
+    <a href="https://www.crowdstrike.com/cybersecurity-101/lateral-movement/">Article: lateral movement</a>
+
+    <h2>Mitigations</h2>
+    Keeping the OS and its software up-to-date eliminates known vulnerabilities which could normally be used to laterally move from one subsystem to another.
+
+    <h2>Detections</h2>
+    Automated software should periodically scan the software versions being used on the operating system. These versions can be cross-referenced with reputable CVE databases to check for vulnerabilities. Once such a vulnerability is detected, the owner of the robot should be notified.
+
+    <h2>Documented incidents with autonomous robots</h2>
+    The Unitree autonomous robot was infiltrated in its OS subsystem. Through lateral movement, the controller subsystem became accessible. A demonstration of this can be seen in the video below.
+
+	    <br>
+    <div >
+        <video width="400" controls>
+          <source src="images/through_subsystem.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+    </div>
+
+
+    <h2>Documented incidents in other domains</h2>
+    <ol>
+      <il><a href="https://thehackernews.com/2023/01/icedid-malware-strikes-again-active.html">[2023] IcedID malware strikes again</a></il>
+
+    </ol>
+
+</body>
+
+</html>
